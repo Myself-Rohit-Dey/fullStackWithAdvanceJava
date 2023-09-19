@@ -1,0 +1,17 @@
+<div class="filter-container">
+    <span>Filter: </span>
+    <input type="radio" name="filter" value="all" [(ngModel)]="selectedOption" (change)="changeWithRadioButtonSelect()"/> 
+    <span>{{'All Products('+all+')'}}</span>
+    <input type="radio" name="filter" value="smartphones" [(ngModel)]="selectedOption" (change)="changeWithRadioButtonSelect()"/>
+    <span>{{'Smartphones('+smartphones+')'}}</span>
+    <input type="radio" name="filter" value="laptops" [(ngModel)]="selectedOption" (change)="changeWithRadioButtonSelect()"/>
+    <span>{{'Laptops('+laptops+')'}}</span>
+    <input type="radio" name="filter" value="fragrances" [(ngModel)]="selectedOption" (change)="changeWithRadioButtonSelect()"/>
+    <span>{{'Fragrances('+fragrances+')'}}</span>
+    <input type="radio" name="filter" value="skincare" [(ngModel)]="selectedOption" (change)="changeWithRadioButtonSelect()"/>
+    <span>{{'Skincare('+skincare+')'}}</span>
+    <input type="radio" name="filter" value="groceries" [(ngModel)]="selectedOption" (change)="changeWithRadioButtonSelect()"/>
+    <span>{{'Groceries('+groceries+')'}}</span>
+    <input type="radio" name="filter" value="home-decoration" [(ngModel)]="selectedOption" (change)="changeWithRadioButtonSelect()"/>
+    <span>{{'Home decoration('+homedecoration+')'}}</span>
+</div>

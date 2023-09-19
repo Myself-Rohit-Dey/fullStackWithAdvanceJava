@@ -1,0 +1,20 @@
+.products-container{
+    display:inline-flex;
+    margin: 20px;
+    
+}
+.products-card{
+    width: 180px;
+    height: 150px;
+    margin: 10px 10px ;
+    background-color:aliceblue ;
+    
+}
+.products-details{
+    display: flex;
+    margin: 10px 0px;
+}
+.products-rating{
+    width: 50%;
+    font-weight: bold;
+}

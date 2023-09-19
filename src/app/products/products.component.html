@@ -1,0 +1,33 @@
+<div>
+    <app-search></app-search>
+    <app-filter 
+    [all]="getTotalProducts()"
+    [smartphones]="getTotalSmartPhones()"
+    [laptops]="getTotalLaptops()"
+    [perfume]="getTotalFragrances()"
+    [skincare]="getTotalSkincare()"
+    [groceries]="getTotalGroceries()"
+    [homedecoration]="getTotalHomeDecoration()"
+    (radioButtonSelectionEvent)="onRadioButtonChange($event)"
+    ></app-filter>
+</div>
+
+<ng-container *ngFor="let product of products">
+<div class="products-container" *ngIf="productType === 'all' || productType === product.category">
+    <mat-card class="products-card">
+    <mat-card-header>
+        <mat-card-title style="font-size:8px;">{{product.title}}</mat-card-title>   
+        <mat-card-subtitle style="font-size:5px;">{{product.description}}</mat-card-subtitle>
+        <img mat-card-avatar [src]="product.thumbnail"> 
+    </mat-card-header> 
+    <mat-card-content>
+        <div class="products-details">
+        <div class="products-rating" [ngStyle]="{color: product.rating>4.50 ? 'green' : 'orange'}" style="font-size:8px;">Rating: {{product.rating}}</div>
+        
+        <div class="" style="font-size:8px;">Price: ${{product.price}}</div>
+        <div class="" style="font-size:8px;">Discount: {{product.discountPercentage}}%</div>
+        </div>
+    </mat-card-content>
+    </mat-card>
+</div>
+</ng-container>
